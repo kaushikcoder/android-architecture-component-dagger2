@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kaushik.myredmart.ui.ProductDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/imagePager"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:transitionName="product_img"
+                android:paddingTop="8dp" />
+
+            <com.kaushik.myredmart.utility.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagePager"
+                android:layout_margin="10dip" />
+
+            <TextView
+                android:id="@+id/productTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/indicator"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Meiji Fresh Milk"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/productDefTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productTitle"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/highl8_text_bg"
+                android:text="Frozen"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/productWightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productDefTextView"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="300g"
+                android:textColor="@color/viewDividerColor"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/viewDivider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/productWightTextView"
+                android:layout_marginTop="15dp"
+                android:background="@color/viewDividerColorSecondary" />
+
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewDivider1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="$5.30"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/originalPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewDivider1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/priceTextView"
+                android:background="@drawable/strike_through"
+                android:text="$141"
+                android:textSize="15sp" />
+
+
+            <View
+                android:id="@+id/viewDivider2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/priceTextView"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/divider_3d_bg" />
+
+            <TextView
+                android:id="@+id/addToCartTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewDivider2"
+                android:background="@color/colorRedmat"
+                android:padding="2dp"
+                android:text="ADD TO CART"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/viewDivider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/addToCartTextView"
+                android:background="#b5b3b3" />
+
+            <TextView
+                android:id="@+id/saveToListTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addToCartTextView"
+                android:padding="1dp"
+                android:text="SAVE TO LIST"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/viewDivider4"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/saveToListTextView"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/divider_3d_bg" />
+
+            <TextView
+                android:id="@+id/aboutHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewDivider4"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="300g"
+                android:textColor="@color/viewDividerColor"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/aboutProductTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutHeadingTextView"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="20dp"
+                android:text="Product of Australia. Versatile broccoli is delicious raw or cooked, and it is packed with so many complex nutrients that it's often called a superfood."
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
